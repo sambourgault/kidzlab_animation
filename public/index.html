@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidzLab Animation</title>
+  <!-- <link href="../src/output.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-gray-100 ">
+  <!-- <h1 class="text-3xl font-bold m-4">jardin d'esquisses</h1> -->
+  <img src="../assets/titre.png" alt="KidzLab Logo" class="w-128 h-auto m-4 mx-6"/>
+
+  <canvas 
+    id="myCanvas" 
+    width="800" 
+    height="600" 
+    class="bg-black border-white border-4 m-4 mx-6">
+  </canvas>
+
+  <div class="m-4 mx-6 text-gray-400">
+    <input type="image" id="drawBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 rounded" src="../assets/white.png" onclick="setMode(0, '#FFFFFF')"/>
+    <input type="image" id="drawBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 rounded" src="../assets/green.png" onclick="setMode(0, '#B9F885')"/>
+    <input type="image" id="drawBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 rounded" src="../assets/blue.png" onclick="setMode(0, '#746DFF')"/>
+    <input type="image" id="drawBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 rounded" src="../assets/orange.png" onclick="setMode(0, '#FFA719')"/>
+    <input type="image" id="drawBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 rounded" src="../assets/red.png" onclick="setMode(0, '#FF0000')"/>
+
+    <input type="image" id="selectBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 mx-4 rounded" src="../assets/select.png" onclick="setMode(1)"/>
+
+    <input type="image" id="eraseBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 rounded" src="../assets/delete.png" onclick="setMode(2)"/>
+
+    <input type="image" id="saveBtn" class="w-16 h-16 object-contain bg-gray-700 hover:bg-gray-600 py-2 px-2 mx-4 rounded" src="../assets/save.png" onclick="setMode(3)"/>
+  </div>
+
+
+  <script src="https://unpkg.com/paper@0.12.17/dist/paper-full.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
