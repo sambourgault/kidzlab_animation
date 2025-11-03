@@ -62,8 +62,15 @@ window.onload = function() {
 	// at the position of the mouse:
 	function onMouseDrag(event) {
 		if (mode == 0) {
-			paths[currentTempId].add(event.point);
-			view.draw();
+			// compute distance from last point to current
+			let lastPoint = paths[currentTempId].lastSegment.point;
+			let currentPoint = event.point;
+			let distance = lastPoint.getDistance(currentPoint);
+			//console.log("Distance from last point to current: " + distance);
+			if (distance > 10 || paths[currentTempId].segments.length == 1) {
+				paths[currentTempId].add(event.point);
+				view.draw();
+			}
 		}
 		
 		// Update the content of the text item to show how many
