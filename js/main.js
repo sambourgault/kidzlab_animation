@@ -6,7 +6,7 @@ let pathId = 0;
 let currentTempId = null;
 let mode = 0; // 0 = draw, 1 = select, 2 = erase, 3 = save svg
 let selectedPath = null;
-let color = 'red';
+let color = '#e1deda';
 let previousMode = 0;
 
 // Only executed our code once the DOM is ready.
